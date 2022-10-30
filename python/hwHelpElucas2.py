@@ -110,3 +110,38 @@ while string != "quit":
     if string.endswith(".") == True:
         print("The string ends with a period.")
     print()
+
+    #Header 4- name assignmentNumber ProgramNumber Description
+print("Welcome")
+print("Program and Program Number")
+print("Description")
+print("------------------------")
+#Loop of income is not quit
+income = ""
+while income != "quit":
+    print("Enter quit to exit program.")
+    #ask for income
+    income = input("Enter your income: $")
+    if income == "quit":
+        print("Exiting program.")
+        continue
+    else:
+        income = round(float(income), 2)
+    #Check which bracket income is and determine % accordingly
+    if income <= 50000:
+        tax = 0.01
+    elif income <= 75000:
+        tax = 0.02
+    elif income <= 100000:
+        tax = 0.03
+    elif income <= 250000:
+        tax = 0.04
+    elif income <= 500000:
+        tax = 0.05
+    else:
+        tax = 0.06
+    #Calculate tax ammount using %
+    taxAmount = income * tax
+    #Output tax ammount
+    print("The amount of income tax you owe is: $" + str(taxAmount))
+    print()
