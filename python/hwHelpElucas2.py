@@ -20,6 +20,7 @@ while num != "quit":
         state = "negative"
     #Tell of negative, zero, or positive
     print("Your input is " + state + ".")
+    print()
 
 #Header 2- name assignmentNumber ProgramNumber Description
 print("Welcome")
@@ -73,23 +74,39 @@ while amount != "quit":
     print("Dimes - " + str(dimes))
     print("Nickles - " + str(nickles))
     print("Pennies - " + str(pennies))
+    print()
 
 
 #Header 3- name assignmentNumber ProgramNumber Description
+print("Welcome")
+print("Program and Program Number")
+print("Description")
+print("------------------------")
 #Loop if string is not quit
-#Ask for string
-#check if string is only letters
-#check if string is only uppercase
-#check if string is only lowercase
-#check if string is only digits
-#check if string is alphanumeric
-#check if string starts with a capital
-#check if string ends with a period
-
-#Header 4- name assignmentNumber ProgramNumber Description
-#Loop of income is not quit
-#ask for income
-#Check which bracket income is
-#Determine % accordingly
-#Calculate tax ammount using %
-#Output tax ammount
+string = ""
+while string != "quit":
+    print("Enter quit to continue to next program")
+    #Ask for string
+    string = input("Enter text: ")
+    #check if string is only letters
+    if string.isalpha() == True:
+        print("The string has only letters")
+    #check if string is only uppercase
+    if string.isupper() == True:
+        print("The string is all uppercase")
+    #check if string is only lowercase
+    elif string.islower() == True:
+        print("The string is all lowercase")
+    #check if string is only digits
+    if string.isdigit() == True:
+        print("The string has only digits")
+    #check if string is alphanumeric
+    if string.isalnum() == True:
+        print("The string is alpha-numeric.")
+    #check if string starts with a capital
+    if string[0].isupper() == True:
+        print("The string starts with a capital letter.")
+    #check if string ends with a period
+    if string.endswith(".") == True:
+        print("The string ends with a period.")
+    print()
