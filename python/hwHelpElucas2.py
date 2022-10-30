@@ -1,8 +1,25 @@
 #Header 1- name assignmentNumber ProgramNumber Description
+print("Welcome")
+print("Program and Program Number")
+print("Description")
+print("------------------------")
 #Loop if int is not "quit"
-#Ask for int
-#Check if negative, zero, or positive
-#Tell of negative, zero, or positive
+num = ""
+while num != "quit":
+    print("Enter quit to continue to next program.")
+    #Ask for int
+    num = input("Enter a number: ")
+    #Check if negative, zero, or positive
+    if num == "quit":
+        state = "quit"
+    elif int(num) > 0:
+        state = "positive"
+    elif int(num) == 0:
+        state = "zero"
+    elif int(num) < 0:
+        state = "negative"
+    #Tell of negative, zero, or positive
+    print("Your input is " + state + ".")
 
 #Header 2- name assignmentNumber ProgramNumber Description
 #Loop if ammount is not quit
