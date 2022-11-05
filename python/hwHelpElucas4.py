@@ -26,3 +26,16 @@ print(avgOfThree(num1, num2, num3))
 print(bigOfThree(num1, num2, num3))
 
 print()
+print()
+
+def findArea(width, height):
+    area = width * height
+    return area
+
+#get user input
+num1 = float(input('Enter the width: '))
+num2 = float(input('Enter the height: '))
+#Print results
+print(findArea(num1, num2))
+
+print()
