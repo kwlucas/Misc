@@ -69,7 +69,15 @@ def ReverseList(paramOrigList):
 print('Reversed list: ' + str(ReverseList(newList)))
 
 def GetListFirstLast(paramOrigList):
-    newList = [paramOrigList.pop(0), paramOrigList.pop(-1)]
+    newList = [paramOrigList.copy().pop(0), paramOrigList.copy().pop(-1)]
     return newList
 
 print('First and last of list: ' + str(GetListFirstLast(newList)))
+
+def deleteNegatives(paramOrigList):
+    listCopy = paramOrigList.copy()
+    for i in listCopy:
+        if i < 0:
+            listCopy.remove(i)
+    return listCopy
+print('Here is the list without neagtives ' + str(deleteNegatives(newList)))
