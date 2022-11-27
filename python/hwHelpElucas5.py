@@ -22,3 +22,15 @@ avgOfList = sumOfList / len(numberList)
 # Also output the sum, and average of the list
 print('Sum of numbers: ' + str(sumOfList))
 print('Average of numbers: ' + str(avgOfList))
+
+# -----------------------------------------------------------------------------------------------
+def CountChar(paramString):
+    count = 0
+    for i in paramString:
+        count += 1
+    return count
+#ask user for string
+userString = input('Please enter a string. ')
+letterCount = CountChar(userString)
+print('The string you entered has ' + str(letterCount) + ' character(s).')
+# -----------------------------------------------------------------------------------------------
