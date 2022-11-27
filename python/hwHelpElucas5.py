@@ -29,10 +29,6 @@ def CountChar(paramString):
     for i in paramString:
         count += 1
     return count
-#ask user for string
-userString = input('Please enter a string. ')
-letterCount = CountChar(userString)
-print('The string you entered has ' + str(letterCount) + ' character(s).')
 # -----------------------------------------------------------------------------------------------
 def GetNewNumberList():
     newNumberList = []
@@ -47,32 +43,22 @@ def GetNewNumberList():
         newNumberList.append(float(userInput))
     return newNumberList
 
-newList = GetNewNumberList()
-print('The list returned by the function ' + str(newList))
-formattedList = ', '.join([str(i) for i in newList])
-print('The values you entered, formatted nicely: ' + formattedList)
-
 def CountNegatives(paramOrigList):
     negativeCount = 0
     for i in paramOrigList:
         if i < 0:
             negativeCount += 1
     return negativeCount
-print('There are ' + str(CountNegatives(newList)) + ' negative numbers in the list.')
-# -----------------------------------------------------------------------------------------------
+
 def ReverseList(paramOrigList):
     reorderedList = []
     for i in paramOrigList:
         reorderedList.insert(0, i)
     return reorderedList
 
-print('Reversed list: ' + str(ReverseList(newList)))
-
 def GetListFirstLast(paramOrigList):
     newList = [paramOrigList.copy().pop(0), paramOrigList.copy().pop(-1)]
     return newList
-
-print('First and last of list: ' + str(GetListFirstLast(newList)))
 
 def deleteNegatives(paramOrigList):
     listCopy = paramOrigList.copy()
@@ -80,4 +66,69 @@ def deleteNegatives(paramOrigList):
         if i < 0:
             listCopy.remove(i)
     return listCopy
-print('Here is the list without neagtives ' + str(deleteNegatives(newList)))
+
+# -----------------------------------------------------------------------------------------------
+
+print('PROGRAM 4 - Testing functions')
+print('')
+print('Testing program 2 function')
+print('')
+#ask user for string
+userString = input('Please enter a string. ')
+letterCount = CountChar(userString)
+print('The string you entered has ' + str(letterCount) + ' character(s).')
+
+print('')
+print('Testing program 3 functions')
+print('')
+print('3a - new number list')
+print('')
+
+newList = GetNewNumberList()
+print('The list returned by the function: ' + str(newList))
+formattedList = ', '.join([str(i) for i in newList])
+print('The values you entered, formatted nicely: ' + formattedList)
+
+print('')
+print('3b - Count the negative numbers')
+print('')
+newList = GetNewNumberList()
+print('')
+print('There are ' + str(CountNegatives(newList)) + ' negative numbers in the list.')
+print('')
+
+print('3c - Reverse list')
+print()
+newList = []
+while True:
+    userInput = input('Enter an item to put into the list. (or type "done" to finalize list.')
+    if userInput != 'done':
+        newList.append(userInput)
+        continue
+    break
+    
+
+print('')
+print('The original list: ' + str(newList))
+print('Reversed list: ' + str(ReverseList(newList)))
+print('')
+
+print('3d - First and last')
+print()
+newList = []
+while True:
+    userInput = input('Enter an item to put into the list. (or type "done" to finalize list.')
+    if userInput != 'done':
+        newList.append(userInput)
+        continue
+    break
+
+print('First of list: ' + str(GetListFirstLast(newList)[0]))
+print('Last of list: ' + str(GetListFirstLast(newList)[1]))
+
+print()
+print('3e - Delete negatives')
+print()
+newList = GetNewNumberList()
+print('The original list: ' + str(newList))
+print('The list without neagtives: ' + str(deleteNegatives(newList)))
