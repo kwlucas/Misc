@@ -60,3 +60,10 @@ def CountNegatives(paramOrigList):
     return negativeCount
 print('There are ' + str(CountNegatives(newList)) + ' negative numbers in the list.')
 # -----------------------------------------------------------------------------------------------
+def ReverseList(paramOrigList):
+    reorderedList = []
+    for i in paramOrigList:
+        reorderedList.insert(0, i)
+    return reorderedList
+
+print('Reversed list: ' + str(ReverseList(newList)))
