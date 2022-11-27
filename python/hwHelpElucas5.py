@@ -34,3 +34,29 @@ userString = input('Please enter a string. ')
 letterCount = CountChar(userString)
 print('The string you entered has ' + str(letterCount) + ' character(s).')
 # -----------------------------------------------------------------------------------------------
+def GetNewNumberList():
+    newNumberList = []
+    userInput = ''
+    while userInput != 'done':
+        userInput = input('Please enter a number. ')
+        convertInput = userInput.replace('.', '')
+        convertInput = convertInput.replace('-', '')
+        if not convertInput.isdigit():
+            print('Input is not a valid integer or float please enter another number.')
+            continue
+        newNumberList.append(float(userInput))
+    return newNumberList
+
+newList = GetNewNumberList()
+print('The list returned by the function ' + str(newList))
+formattedList = ', '.join([str(i) for i in newList])
+print('The values you entered, formatted nicely: ' + formattedList)
+
+def CountNegatives(paramOrigList):
+    negativeCount = 0
+    for i in paramOrigList:
+        if i < 0:
+            negativeCount += 1
+    return negativeCount
+print('There are ' + str(CountNegatives(newList)) + ' negative numbers in the list.')
+# -----------------------------------------------------------------------------------------------
