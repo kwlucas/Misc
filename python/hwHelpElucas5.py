@@ -67,3 +67,9 @@ def ReverseList(paramOrigList):
     return reorderedList
 
 print('Reversed list: ' + str(ReverseList(newList)))
+
+def GetListFirstLast(paramOrigList):
+    newList = [paramOrigList.pop(0), paramOrigList.pop(-1)]
+    return newList
+
+print('First and last of list: ' + str(GetListFirstLast(newList)))
